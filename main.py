@@ -3,15 +3,14 @@
 # Press Shift+F10 to execute it or replace it with your code.
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 
-from flask import Flask
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
 """1. Add a View Function for the Home page."""
 @app.route("/")
 def home():
-    return "Paws Rescue Center 🐾"
-
+    return render_template("home.html")
 """2. Add a View Function for the About page."""
 @app.route("/about")
 def about():
