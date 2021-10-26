@@ -11,6 +11,14 @@ app = Flask(__name__)
 def home():
     return "Welcome to the HomePage!"
 
+@app.route("/<my_name>")
+def greetings(my_name):
+    return "Welcome " + my_name + " to our website!"
+
+@app.route('/square/<int:number>')
+def show_square(number):
+    return "Square of " + str(number) + " is: " + str(number * number)
+
 @app.route("/educative")
 def learn():
     return "Welcome to the Learning Page!"
