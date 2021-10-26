@@ -8,8 +8,12 @@ from flask import Flask
 app = Flask(__name__)
 
 @app.route("/")
-def hello():
-    return "Hello World!"
+def home():
+    return "Welcome to the HomePage!"
+
+@app.route("/educative")
+def learn():
+    return "Welcome to the Learning Page!"
 
 
 # Press the green button in the gutter to run the script.
